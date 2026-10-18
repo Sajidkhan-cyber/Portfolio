@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sajid Khan – IT & Network Professional</title>
+<meta name="description" content="Portfolio of Sajid Khan, IT and network professional with Cisco CCNA, Microsoft Azure and security, and H3C certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6F8; --surface:#FFFFFF; --ink:#10212F; --muted:#4D6072; --line:#D3DDE5;
+  --accent:#1F5FD1; --accent-ink:#FFFFFF; --ok:#1E8E5A; --warn:#B7791F;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1A24; --surface:#152634; --ink:#E6EEF4; --muted:#9DB0C0; --line:#264053;
+    --accent:#6FA8FF; --accent-ink:#0E1A24; --ok:#4CC38A; --warn:#E3B04B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1A24; --surface:#152634; --ink:#E6EEF4; --muted:#9DB0C0; --line:#264053;
+  --accent:#6FA8FF; --accent-ink:#0E1A24; --ok:#4CC38A; --warn:#E3B04B; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:18px 0;font-weight:500;font-size:15px;border-bottom:1px solid var(--line)}
+nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto;color:var(--ink);font:700 18px var(--head)}
+nav .mark{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--ink);color:var(--bg);font:700 15px var(--head)}
+nav a.cta{background:var(--accent);color:var(--accent-ink);padding:8px 16px;border-radius:8px;font-weight:600}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:48px 0 72px}
+h1{font:700 clamp(44px,8vw,84px)/1 var(--head);letter-spacing:-.03em;margin:0 0 18px}
+.role{font:500 clamp(20px,3vw,26px)/1.3 var(--head);color:var(--accent);margin:0 0 18px}
+.lead{color:var(--muted);max-width:54ch;margin:0 0 20px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.pri{background:var(--accent);color:var(--accent-ink)}
+.btn.sec{color:var(--accent)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.badges li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-weight:600;font-size:14px}
+.vendor{display:inline-block;font:600 13px var(--body);padding:2px 10px;border-radius:999px;margin-bottom:6px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.topo{width:100%;height:auto;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.topo .ln{stroke:var(--line);stroke-width:2;fill:none}
+.topo .nd{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.topo .core{fill:var(--accent);stroke:var(--accent)}
+.topo text{font:500 12px var(--body);fill:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(28px,4vw,38px)/1.15 var(--head);letter-spacing:-.02em;margin:0 0 28px}
+h3{font:700 20px/1.3 var(--head);margin:0 0 6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.fact b{display:block;font:700 28px/1.1 var(--head)}
+.fact span{color:var(--muted);font-size:15px}
+.about{max-width:68ch}
+.certs{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cert{display:grid;grid-template-columns:18px 1fr auto;gap:6px 16px;padding:20px 22px;border-top:1px solid var(--line)}
+.cert:first-child{border-top:0}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--ok);margin-top:7px}
+.dot.soon{background:var(--warn)}
+.cert p{margin:0;color:var(--muted);font-size:15px}
+.cert .when{text-align:right;font-size:15px;color:var(--muted)}
+.cert .when strong{color:var(--ink);display:block}
+.id{font-family:ui-monospace,Consolas,monospace;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:15px}
+.box p{margin:0;color:var(--muted)}
+.tl{border-left:3px solid var(--accent);padding-left:22px;margin-bottom:28px}
+.tl p{margin:0;color:var(--muted)}
+.note{color:var(--muted);font-size:15px;margin-top:16px}
+.contact a.big{font:700 clamp(22px,4vw,34px)/1.2 var(--head);word-break:break-all}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:24px}
+  .cert{grid-template-columns:18px 1fr}
+  .cert .when{grid-column:2;text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+  <a class="brand" href="#"><span class="mark">SK</span>Sajid Khan</a>
+  <a href="#about">About</a><a href="#certs">Certifications</a><a href="#skills">Skills</a><a href="#labs">Labs</a><a href="#experience">Experience</a><a class="cta" href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <h1>Sajid Khan</h1>
+    <p class="role">IT &amp; Network Professional</p>
+    <p class="lead">I build, connect and maintain the systems people rely on every day. Cisco CCNA certified, with Microsoft Azure and security credentials plus H3C industry certifications, currently working as a Technology Officer at 1Link Solution.</p>
+    <ul class="badges" aria-label="Key credentials"><li>Cisco CCNA</li><li>Microsoft AZ-900</li><li>Microsoft SC-900</li><li>H3C HSE L3 Expert</li></ul>
+    <div class="btns">
+      <a class="btn pri" href="#certs">View certifications</a>
+      <a class="btn sec" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <svg class="topo" viewBox="0 0 320 280" role="img" aria-label="Simple network diagram: a core switch connected to a router, a server and two workstations">
+    <path class="ln" d="M160 140 L160 40 M160 140 L50 220 M160 140 L270 220 M160 140 L50 90 M160 140 L270 90"/>
+    <circle class="nd" cx="160" cy="40" r="22"/><text x="160" y="82" text-anchor="middle">Internet</text>
+    <circle class="nd core" cx="160" cy="140" r="28"/><text x="160" y="190" text-anchor="middle">Core switch</text>
+    <circle class="nd" cx="50" cy="90" r="20"/><text x="50" y="126" text-anchor="middle">Router</text>
+    <circle class="nd" cx="270" cy="90" r="20"/><text x="270" y="126" text-anchor="middle">Server</text>
+    <circle class="nd" cx="50" cy="220" r="20"/><text x="50" y="258" text-anchor="middle">PC (VLAN 10)</text>
+    <circle class="nd" cx="270" cy="220" r="20"/><text x="270" y="258" text-anchor="middle">PC (VLAN 20)</text>
+  </svg>
+</header>
+
+<section id="about">
+  <h2>About me</h2>
+  <p class="about">I’m an IT support and networking professional with a Bachelor’s in Computer Science from the University of Science and Technology, Bannu (2024). I work across Windows 10/11 support, LAN/WAN setup and troubleshooting, and I practise network design in Packet Tracer, GNS3 and VMware Workstation. I communicate clearly with customers and teammates, and I keep learning through vendor certifications.</p>
+  <div class="facts">
+    <div class="fact"><b>6</b><span>Industry certifications</span></div>
+    <div class="fact"><b>BSCS</b><span>Graduated 2024</span></div>
+    <div class="fact"><b>May 2025</b><span>Started at 1Link Solution</span></div>
+    <div class="fact"><b>40 WPM</b><span>Typing speed</span></div>
+  </div>
+</section>
+
+<section id="certs">
+  <h2>Certifications</h2>
+  <div class="certs">
+    <div class="cert">
+      <span class="dot" title="Active"></span>
+      <div><span class="vendor">Cisco</span><h3>Cisco Certified Network Associate (CCNA)</h3>
+        <p>Cisco ID <span class="id">CSCO15086807</span> · Verification no. <span class="id">bc552f0520d64ecf96e48a718deeb6b6</span></p>
+        <p><a href="https://www.cisco.com/go/verifycertificate" rel="noopener">Verify on Cisco</a></p></div>
+      <div class="when"><strong>Valid to 6 Apr 2029</strong>Certified 6 Apr 2026</div>
+    </div>
+    <div class="cert">
+      <span class="dot" title="Active"></span>
+      <div><span class="vendor">Microsoft</span><h3>Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</h3>
+        <p>Credential ID <span class="id">3CF50E194413409F</span> · Certification no. <span class="id">761W99-54D82D</span></p>
+        <p><a href="https://learn.microsoft.com/en-gb/users/sajidkhan-7545/credentials/certification/security-compliance-and-identity-fundamentals?tab=credentials-tab" rel="noopener">Verify on Microsoft Learn</a></p></div>
+      <div class="when"><strong>No expiry</strong>Earned 2 Oct 2025</div>
+    </div>
+    <div class="cert">
+      <span class="dot" title="Active"></span>
+      <div><span class="vendor">Microsoft</span><h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+        <p>Cloud concepts, core Azure services, security, governance and pricing.</p></div>
+      <div class="when"><strong>No expiry</strong>Microsoft Azure</div>
+    </div>
+    <div class="cert">
+      <span class="dot soon" title="Renewal due"></span>
+      <div><span class="vendor">H3C</span><h3>H3C Sales Engineer – HSE Industry L3 Expert</h3>
+        <p>Certificate ID <span class="id">HSEL3000052</span></p></div>
+      <div class="when"><strong>Valid to 13 Nov 2026</strong>From 13 Nov 2025</div>
+    </div>
+    <div class="cert">
+      <span class="dot soon" title="Renewal due"></span>
+      <div><span class="vendor">H3C</span><h3>H3C Sales Engineer – HSE Industry CT L2 Specialist</h3>
+        <p>Certificate ID <span class="id">HSEL2000131</span></p></div>
+      <div class="when"><strong>Valid to 13 Nov 2026</strong>From 13 Nov 2025</div>
+    </div>
+    <div class="cert">
+      <span class="dot" title="Active"></span>
+      <div><span class="vendor">H3C</span><h3>H3C Sales Engineer – HSE Industry L1 Generalist</h3>
+        <p>Certificate ID <span class="id">HSE-L1000318</span></p></div>
+      <div class="when"><strong>Valid to 12 Nov 2027</strong>From 12 Nov 2025</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="box"><h3>Networking</h3>
+      <ul class="tags"><li>OSI model</li><li>TCP/IP</li><li>LAN</li><li>WAN</li><li>Telnet</li><li>SSH</li><li>Internet &amp; network setup</li></ul></div>
+    <div class="box"><h3>Systems &amp; support</h3>
+      <ul class="tags"><li>Windows 10 &amp; 11</li><li>Troubleshooting</li><li>Software &amp; driver installation</li><li>System maintenance &amp; updates</li><li>Command prompt</li><li>Microsoft Office</li></ul></div>
+    <div class="box"><h3>Cloud &amp; security</h3>
+      <ul class="tags"><li>Microsoft Azure fundamentals</li><li>Cloud concepts</li><li>Security, compliance &amp; identity</li></ul></div>
+    <div class="box"><h3>Lab tools</h3>
+      <ul class="tags"><li>Cisco Packet Tracer</li><li>GNS3</li><li>VMware Workstation</li></ul></div>
+    <div class="box"><h3>Working with people</h3>
+      <ul class="tags"><li>Problem solving</li><li>Teamwork</li><li>Communication</li><li>Customer handling</li><li>Time management</li></ul></div>
+  </div>
+</section>
+
+<section id="labs">
+  <h2>Hands-on labs</h2>
+  <div class="grid">
+    <div class="box"><h3>Packet Tracer</h3><p>Switching, routing and LAN/WAN designs practised during CCNA preparation.</p></div>
+    <div class="box"><h3>GNS3</h3><p>Emulated multi-device topologies for testing configurations and connectivity.</p></div>
+    <div class="box"><h3>VMware Workstation</h3><p>Virtual machines for Windows setup, updates and troubleshooting practice.</p></div>
+  </div>
+  <p class="note">Detailed lab write-ups with topology diagrams and configurations are coming soon.</p>
+</section>
+
+<section id="experience">
+  <h2>Experience and education</h2>
+  <div class="tl"><h3>Technology Officer, 1Link Solution</h3><p>May 2025 – present</p></div>
+  <div class="tl"><h3>Bachelor’s in Computer Science (BSCS)</h3><p>University of Science and Technology, Bannu · 2024</p></div>
+  <div class="tl"><h3>Diploma of Information Technology</h3></div>
+  <p class="note">Languages: English (good), Urdu (native).</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let’s talk</h2>
+  <p><a class="big" href="mailto:sajidkhanbannuzaii@gmail.com">sajidkhanbannuzaii@gmail.com</a></p>
+  <p><a href="https://www.linkedin.com/in/sajidkhanbannuzai" rel="noopener">LinkedIn</a> · <a href="https://www.classesplace.com" rel="noopener">classesplace.com</a></p>
+</section>
+
+<footer>© 2026 Sajid Khan. Certification details are listed as shown on the original certificates.</footer>
+</div>
+</body>
+</html>
